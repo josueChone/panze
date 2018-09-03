@@ -1,0 +1,89 @@
+/* ======== Cores */
+$branco: white
+$cinza-claro: #F0F0F0
+$cinza-7: #e7e7e7
+$cinza-77: #ddd 
+$cinza: #555555
+$verde-branco: #F6F9FC
+$verde: #00A99D
+$verde-1: #00B99D
+$azul: #2196F3
+$azul-1: #0b7dda
+$laranja: #ff9800
+$laranja-1: #e68a00
+$vermelho: #de190b
+$vermelho-1: #da190b
+$ros: #FF020A
+$preto: #000
+
+/* ======== Font */
+$extra-light: 200
+$light: 300
+$regular: 400
+$medio: 500
+$sime-bold: 600
+$bold: 700
+$max-bold: 900
+
+$celular-xxm: max-width 320px
+$celular-xm: max-width 360px
+$celular-sm: max-width 375px
+$celular-sms: max-width 411px
+$celular: max-width 440px
+$tablet-xxm: max-width 540px
+$tablet-xm: max-width 768px
+$tablet-sm: max-width 991px
+$tablet-max: max-width 1024px
+
+=flexbox
+  display: -webkit-box
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flexbox
+  display: flex
+
+=gradient($angle,$gradient1, $gradient2)
+  background-color: $gradient2 
+  background-image: -webkit-gradient(linear, $angle, from($gradient1), to($gradient2))
+  background-image: -webkit-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:    -moz-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:     -ms-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:      -o-linear-gradient($angle, $gradient1, $gradient2)
+  background-image:         linear-gradient($angle, $gradient1, $gradient2)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#{$gradient1}', EndColorStr='#{$gradient2}')
+
+/* ======== Outros */
+=transition($transition...) 
+  -moz-transition:    all $transition linear
+  -o-transition:      all $transition linear
+  -webkit-transition: all $transition linear
+  transition:         all $transition linear
+
+=border-radius($radius) 
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+@function calculateRem($size) 
+  $remSize: $size / 16px
+  @return $remSize * 1rem
+
+=font-size($size) 
+  font-size: $size
+  font-size: calculateRem($size)
+
+=opacity($opacity) 
+  opacity: $opacity
+  $opacity-ie: $opacity * 100
+  filter: alpha(opacity=$opacity-ie)
+
+/* ======== Background Color Opacity */
+=background-opacity($color: #000, $opacity: 0.85) 
+  background: $color
+  background: rgba($color, $opacity)
+
+/* ======== Columns */
+=columns($count: 3, $gap: 10) 
+  @include css3-prefix('column-count', $count)
+  @include css3-prefix('column-gap', $gap)

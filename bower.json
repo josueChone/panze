@@ -1,0 +1,28 @@
+{
+  "name": "Joshua Shony",
+  "authors": [
+    "Josue Chone <jushuashony@gmail.com>"
+  ],
+  "description": "Criador do site do Arsenio Panze",
+  "main": "mc",
+  "keywords": [
+    "Mc",
+    "de",
+    "festas",
+    "de",
+    "casamento",
+    "Mc",
+    "Mc",
+    "Moz"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

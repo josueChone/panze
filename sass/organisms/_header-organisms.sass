@@ -1,0 +1,173 @@
+@import ../node_modules/font-awesome/fonts/fontawesome-webfont.ttf
+@import _menu-resposivo-arganisms
+#header
+	width: 100%
+	height: 100%
+	background: url("../img/teste-21.png")
+	background-position: center
+	background-size: cover
+	transition: margin-right .5s
+	.container 	
+		.menu	
+			width: 100%
+			height: 50px
+			+flexbox
+			+flex-flow	
+			+align-items(center)	
+			+justify-content(space-between)
+			ul
+				width: 75%
+				height: 73px	
+				+flexbox
+				+flex-flow
+				+justify-content(flex-star)
+				+align-items(center)
+				text-align: left
+				margin-left: 15%
+				padding-top: 5px
+				+breakpoint($tablet-max)
+					display: none
+				li		
+					padding: 30px 15px  23px 15px
+					&:hover
+						background-color: $ros
+				.activo		
+					background-color: $ros
+				a		
+					color: $branco
+					font-weight: bold
+			.social
+				width: 10%
+				height: auto
+				+breakpoint($tablet-max)
+					width: 30%
+					+flexbox
+					+justify-content(flex-end)		
+				.btn-menu		
+					display: none
+					+breakpoint($tablet-max)
+						display: block
+				.btn-icon		
+					+border-radius(120px)
+					border: 1px solid $branco
+					padding: 10px 12px
+					margin: 0 5px;
+					color: $ros 
+	.date-envertos-header
+		width: 35%
+		height: 500px
+		background-color: rgba($preto, .7)
+		margin-top: 12px
+		margin-bottom: 60px
+		.content
+			padding: 70px 40px 70px 80px
+			color: $branco
+			h2
+				+font-size(40px)
+				font-family: 'Oswald', sans-serif
+				font-weight: 100
+				text-transform: uppercase
+				padding-bottom: 15px
+			.descrisao	
+				text-transform: uppercase
+				+font-size(13px)
+				padding-bottom: 15px	
+			.slider		
+				width: 100%
+				height: 150px
+				.flexslider
+					width: 100%
+					height: auto
+					position: relative
+					zoom: 1
+					.slides
+						width: 100%
+						overflow: hidden
+						li
+							width: 100%
+							height: 150px
+							text-align: center
+							+transition(.4s)	
+							+flexbox
+							.descri-event	
+								width: 90%
+								height: 100px
+								margin: 25px auto
+								background-color: $preto
+								+flexbox
+								+flex-flow
+								+align-items(center)
+								.date-event	
+									width: 30%
+									height: 100px
+									background-color: #313131
+									padding: 20px 0
+									h6
+										font-family: 'Oswald', sans-serif
+										font-weight: bold
+										+font-size(40px)
+										text-align: center
+										p	
+											font-family: 'Oswald', sans-serif
+											font-weight: 200
+											+font-size(15px)
+								.event-text	
+									width: 70%
+									height: 100px
+									background-color: $branco
+									color: #313131
+									text-align: left
+									padding: 18px 10px
+									h6
+										text-transform: uppercase
+										padding-bottom: 5px
+										font-family: 'Oswald', sans-serif
+										font-weight: bold
+									p	
+										+font-size(14px)	
+										font-family: 'Old Standard TT', serif
+										line-height: 1.3	
+					.slides,
+					.flex-control-nav, 
+					.flex-direction-nav			
+						list-style: none
+					.flex-control-nav	
+						text-align: center
+						width: 100%
+						position: absolute
+						top: 90%
+						z-index: 0	
+						li
+							display: inline-block
+							margin: 0 6px
+							a
+								display: block
+								background-color: rgba($branco, .6)
+								width: 12px
+								height: 12px
+								+border-radius(120px)
+								text-indent: -9999px
+								background-color: rgba($ros, .3)
+								&:hover
+									background-color: $ros
+					.flex-direction-nav	
+						li
+							display: inline
+							text-decoration: none
+							position: absolute
+							top: 45%
+							z-index: 0
+							display: none
+							.flex-prev
+								color: $ros
+								margin-left: 280px
+							.flex-next
+								content: "\f104"
+								color: $ros
+								margin-left: 5px								
+		.btn		
+			float: right
+			margin-top: -25px	
+			background-color: $ros
+			border-radius: none
+			padding: 12px 25px

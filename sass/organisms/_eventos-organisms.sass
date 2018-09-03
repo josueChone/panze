@@ -1,0 +1,63 @@
+#eventos
+	width: 100%
+	height: 667px
+	background: url(../img/city.jpg)	
+	+flexbox
+	+flex-flow(row nowrap)
+	+justify-content(flex-end)
+	+align-items(center)	
+	.eventos	
+		width: 50%
+		height: auto
+		background-color: rgba($preto, .7)
+		padding: 50px 80px 50px 0
+		h2
+			padding-bottom: 25px
+			padding-left: 15%
+			color: $branco
+			font-family: 'Anton', sans-serif
+			+font-size(30px)
+			letter-spacing: 5px
+		.btn		
+			background-color: $ros
+			padding: 10px 50px
+			margin-top: 10px
+			margin-left: 360px
+		.descri-event	
+			width: 70%
+			height: 100px
+			margin: 25px auto
+			background-color: $preto
+			+flexbox
+			+flex-flow
+			+align-items(center)
+			.date-event	
+				width: 30%
+				height: 100px
+				background-color: #313131
+				padding: 20px 0
+				text-align: center
+				color: $branco
+				h6
+					font-family: 'Oswald', sans-serif
+					font-weight: bold
+					+font-size(40px)
+					p	
+						font-family: 'Oswald', sans-serif
+						+font-size(15px)
+			.event-text	
+				width: 70%
+				height: 100px
+				background-color: $branco
+				color: #313131
+				text-align: left
+				padding: 18px 10px
+				h6
+					text-transform: uppercase
+					padding-bottom: 5px
+					font-family: 'Oswald', sans-serif
+					font-weight: bold
+				p	
+					+font-size(14px)	
+					font-family: 'Old Standard TT', serif
+					line-height: 1.3
